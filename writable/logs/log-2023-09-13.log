@@ -1,0 +1,1092 @@
+ERROR - 2023-09-13 04:53:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:53:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 04:54:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:54:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 04:55:28 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:55:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 04:55:29 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:55:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 04:55:31 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:55:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 04:56:13 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:56:13 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 04:56:14 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 04:56:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:00:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:00:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:00:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:00:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:00:55 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:00:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:01:52 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:01:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:01:58 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:01:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:02:48 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:02:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:03:19 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:03:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:07:21 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:07:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:13:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:13:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 05:13:51 --> Class "App\Model\MainModel" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 05:13:52 --> Class "App\Model\MainModel" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 05:13:52 --> Class "App\Model\MainModel" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 05:13:53 --> Class "App\Model\MainModel" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 05:13:53 --> Class "App\Model\MainModel" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 05:13:54 --> Class "App\Model\MainModel" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:14:15 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:14:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:14:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:14:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:14:16 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:14:16 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+ERROR - 2023-09-13 05:15:01 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'NAVY', 3306, '', 0)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#9 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'navy' in C:\laragon\www\3f2\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\3f2\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\3f2\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\3f2\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\3f2\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\3f2\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\3f2\app\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\3f2\system\CodeIgniter.php(919): App\Controllers\MainController->test()
+#7 C:\laragon\www\3f2\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+#8 C:\laragon\www\3f2\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\3f2\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\3f2\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-13 05:15:01 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'navy'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MainController.php(16): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:23:47 --> syntax error, unexpected token ";", expecting "]"
+in APPPATH\Controllers\MainController.php on line 17.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\MainController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\MainController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\MainController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:24:18 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(38): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:29:56 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:29:57 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:29:57 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:29:58 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:29:58 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:31:40 --> syntax error, unexpected identifier "ee", expecting variable or "{" or "$"
+in APPPATH\Views\main.php on line 89.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 3 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:33:27 --> syntax error, unexpected identifier "ee", expecting variable or "{" or "$"
+in APPPATH\Views\main.php on line 89.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 3 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:33:31 --> syntax error, unexpected identifier "ee", expecting variable or "{" or "$"
+in APPPATH\Views\main.php on line 89.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 3 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:33:46 --> syntax error, unexpected identifier "ee", expecting variable or "{" or "$"
+in APPPATH\Views\main.php on line 89.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 3 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:36:01 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:36:03 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:51:57 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-13 12:56:24 --> Undefined variable $ee
+in APPPATH\Views\main.php on line 89.
+ 1 APPPATH\Views\main.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ee', 'C:\\laragon\\www\\3f2\\app\\Views\\main.php', 89)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\3f2\\app\\Views\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 5 APPPATH\Controllers\MainController.php(39): view('main', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->test()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')

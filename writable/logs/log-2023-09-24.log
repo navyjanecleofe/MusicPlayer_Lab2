@@ -1,0 +1,112 @@
+CRITICAL - 2023-09-24 10:48:04 --> Class "App\Models\Playlist" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 10:49:55 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 10:49:57 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:01:51 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:06:50 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:09:40 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:14:40 --> Class "App\Models\Playlist" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:21:36 --> Class "App\Models\Playlist" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:21:38 --> Class "App\Models\Playlist" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:22:22 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:23:17 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:32:27 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:37:01 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:37:16 --> Class "App\Models\Playlists" not found
+in APPPATH\Controllers\MainController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:53:59 --> Class "App\Models\Song" not found
+in APPPATH\Controllers\MainController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
+CRITICAL - 2023-09-24 11:55:18 --> Class "App\Models\Song" not found
+in APPPATH\Controllers\MainController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(891): App\Controllers\MainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\music\\public\\index.php')
