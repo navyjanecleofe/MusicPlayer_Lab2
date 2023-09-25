@@ -3,13 +3,17 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+
 class MainController extends BaseController
 {
     private $playlist;
+    private $song;
+
 
     public function __construct()
     {
         $this->playlist = new \App\Models\PlaylistModel();
+        $this->song = new \App\Models\SongModel();
     }
     public function index()
     {
@@ -19,31 +23,47 @@ class MainController extends BaseController
     {
         $data = [
             'playlist' => $this->playlist->findAll(),
+            'song' => $this->song->findAll(),
+
         ];
         return view('main', $data);
     }
-    public function createPlaylist(){
+
+    public function createPlaylist()
+    {
         $data = [
             'name' => $this->request->getVar('pname'),
         ];
+
         $this->playlist->save($data);
         return redirect()->to('/main');
     }
 
-    public function deletePlaylist($playlistID)
+    public function addsong()
     {
-        // Find the playlist by its ID
-        $playlist = $this->playlist->find($playlistID);
 
-        if ($playlist) {
+        $validationRules = [
+            'song' => 'uploaded[song]|max_size[song,10240]|mime_in[song,audio/mpeg,audio/wav]',
+        ];
+        if ($this->validate($validationRules)) {
 
-            $this->bridge->where('playlist_id', $playlistID)->delete();
 
-            // Now, delete the playlist
-            $this->playlist->delete($playlistID);
+            $song = $this->request->getFile('song');
+            $songname = $song->getName();
+            $newName = $song->getRandomName();
+            $song->move(ROOTPATH . 'uploads', $newName);
+            $data = [
+                'title' => $songname,
+                'file_path' => $newName,
+                //make sure tama names ng collumns
+            ];
+            $this->song->insert($data);
+            return redirect()->to('/main');
+        } else {
+            $data['validation'] = $this->validator;
+            echo "error";
         }
-
-
-        return redirect()->to('/main');
     }
+
+
 }
