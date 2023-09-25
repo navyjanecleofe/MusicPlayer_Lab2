@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class MainModel2 extends Model
+class BridgeModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'playlists';
+    protected $table            = 'bridge';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name'];
+    protected $allowedFields    = ['song_id','playlist_id'];
 
     // Dates
     protected $useTimestamps = false;
