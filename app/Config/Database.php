@@ -29,7 +29,7 @@ class Database extends Config
         'hostname'     => 'localhost',
         'username'     => 'root',
         'password'     => '',
-        'database'     => 'lab2',
+        'database'     => 'music_player',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -52,9 +52,9 @@ class Database extends Config
     public array $tests = [
         'DSN'         => '',
         'hostname'    => '127.0.0.1',
-        'username'    => 'root',
+        'username'    => '',
         'password'    => '',
-        'database'    => 'lab2',
+        'database'    => ':memory:',
         'DBDriver'    => 'SQLite3',
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect'    => false,

@@ -2,130 +2,78 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
+use App\Models\MainModel;
 
 class MainController extends BaseController
 {
-    private $playlist;
-    private $ref;
-    private $songs;
-
-    public function __construct()
+    public function create()
     {
-        $this->playlist = new \App\Models\Playlist();
-        $this->ref = new \App\Models\ReferenceTableModel();
-        $this->songs = new \App\Models\Songs();
-        helper('url');
+        $name = $this->request->getPost('name');
+
+        // Insert a new playlist into the 'playlists' table
+        $playlistData = [
+            'name' => $name,
+        ];
+
+        $playlistModel = new MainModel(); // Replace 'MainModel' with your actual model name
+        $playlistId = $playlistModel->insert($playlistData);
+
+        // Redirect to the playlist page
+        return redirect()->to("/player/playlists/{$playlistId}");
     }
 
-    public function index()
+    public function playlists($id)
     {
-        $searchQuery = $this->request->getGet('search');
-        $playlistId = $this->request->getGet('playlist_id');
+        $playlistModel = new MainModel(); // Replace 'MainModel' with your actual model name
 
-        if (!empty($playlistId)) {
-            $data = $this->fetchPlaylistAndSongs($playlistId);
-        } elseif (!empty($searchQuery)) {
-            $data = $this->searchSongs($searchQuery);
+        $playlist = $playlistModel->find($id);
+
+        if ($playlist) {
+            // Retrieve tracks associated with the playlist
+            $tracks = $playlistModel->getTracksByPlaylist($id); // Implement this method in your model
+
+            $data = [
+                'playlist' => $playlist,
+                'tracks' => $tracks,
+                'allPlaylists' => $playlistModel->findAll(),
+            ];
+
+            return view('player', $data);
         } else {
-            $data = $this->fetchAllSongs();
+            return redirect()->to('/player');
         }
-
-        $data['playlists'] = $this->playlist->findAll();
-        $data['searchQuery'] = $searchQuery;
-
-        return view('index', $data);
     }
 
-    public function playlist($playlistId)
+    public function upload()
     {
-        $data = $this->fetchPlaylistAndSongs($playlistId);
-        $data['playlists'] = $this->playlist->findAll();
-        return view('index', $data);
-    }
-
-    private function fetchPlaylistAndSongs($playlistId)
-    {
-        $playlist = $this->playlist
-            ->select('playlist.playlist_id, playlist.name, music.music_id, music.title, music.artist, music.album, music.file_path')
-            ->join('playlistmusic', 'playlistmusic.playlist_id = playlist.playlist_id')
-            ->join('Music', 'music.music_id = playlistMusic.music_id')
-            ->where('playlist.playlist_id', $playlistId)
-            ->findAll();
-
-        return ['playlistContent' => $playlist];
-    }
-
-    private function searchSongs($searchQuery)
-    {
-        $searchResults = $this->songs->like('title', $searchQuery)
-                                    ->orLike('artist', $searchQuery)
-                                    ->findAll();
-
-        return ['searchResults' => $searchResults];
-    }
-
-    private function fetchAllSongs()
-    {
-        $songs = $this->songs->findAll();
-        return ['songs' => $songs];
-    }
-
-    public function saveMusic()
-    {
-        $musicFilePath = $this->request->getFile('musicFilePath');
-
-        if (!$musicFilePath->isValid() || $musicFilePath->hasMoved()) {
-            return redirect()->back()->with('error', 'File upload failed.');
-        }
-
-        $newName = $this->generateUniqueMp3FileName();
-        $musicFilePath->move(ROOTPATH . 'public/uploads', $newName);
-
-        $data = [
-            'title' => $this->request->getVar('musicTitle'),
-            'artist' => $this->request->getVar('musicArtist'),
-            'album' => $this->request->getVar('musicAlbum'),
+        $file = $this->request->getFile('file');
+        $title = $this->request->getPost('title');
+        $artist = $this->request->getPost('artist');
+    
+        // Move the uploaded file to the public directory
+        $newName = $title . '_' . $artist . '.mp3';
+        $file->move(ROOTPATH . 'public/', $newName);
+    
+        // Insert the new music track into the 'music' table
+        $musicData = [
+            'title' => $title,
+            'artist' => $artist,
             'file_path' => $newName,
         ];
-
-        $this->songs->insert($data);
-
-        return redirect()->to('/');
-    }
-
-    public function savePlaylist()
-    {
-        $data = [
-            'name' => $this->request->getVar('name'),
-        ];
-
-        $this->playlist->insert($data);
-
-        return redirect()->to('/');
-    }
-
-    public function addToPlaylist()
-    {
-        $data = [
-            'playlist_id' => $this->request->getVar('playlist'),
-            'music_id' => $this->request->getVar('musicId'),
-        ];
-
-        $this->ref->insert($data);
-        return redirect()->to('/');
-    }
-
-    private function generateUniqueMp3FileName()
-    {
-        $directory = ROOTPATH . 'public/uploads/';
-        do {
-            $newName = uniqid() . '.mp3'; 
-            $filePath = $directory . $newName;
-        } while (file_exists($filePath)); 
-
-        return $newName;
-    }
-
     
+        $musicModel = new MainModel(); // Replace 'MainModel' with your actual model name
+        $musicModel->insert($musicData);
+    
+        return redirect()->to('/player');
+    }
+    
+
+
+    public function player()
+    {
+        $mainModel = new MainModel(); // Replace 'MainModel' with your actual model name
+        $data['music'] = $mainModel->findAll();
+        $data['playlists'] = $mainModel->findAll(); // Correct method name here
+        return view('main', $data);
+    }
 }
