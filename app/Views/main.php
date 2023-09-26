@@ -1,309 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-         body {
-         font-family: Arial, sans-serif;
-         text-align: center;
-         background-color: #ADC4CE;
-         padding: 20px;
-     }
-
-     h1 {
-         color: #333;
-     }
-
-     #player-container {
-         max-width: 400px;
-         margin: 0 auto;
-         padding: 20px;
-         background-color: #fff;
-         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-     }
-
-     audio {
-         width: 100%;
-     }
-
-     #playlist {
-         list-style: none;
-         padding: 0;
-     }
-
-     #playlist li {
-         cursor: pointer;
-         padding: 10px;
-         background-color: #eee;
-         margin: 5px 0;
-         transition: background-color 0.2s ease-in-out;
-     }
-
-     #playlist li:hover {
-         background-color: #ECF2FF;
-     }
-
-     #playlist li.active {
-         background-color: #007bff;
-         color: #fff;
-     }
-     form {
-    text-align: center;
-    margin: 20px;
-  }
-
-  /* Style the search input */
-  input[type="search"] {
-    padding: 10px;
-    width: 500px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-
-  /* Style the search button */
-  button.btn-primary {
-    padding: 10px 20px;
-    background-color: #007bff; /* Blue color for the primary button */
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 7px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Style the button on hover */
-  button.btn-primary:hover {
-    background-color: #0056b3; /* Darker blue color on hover */
-  }
-    </style>
-</head>
-
-
-
-
 <body>
 
-     <!-- //my addsong -->
-     <div class="modal fade" id="addsongs" tabindex="-1" aria-labelledby="addsongs" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">addSong</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <?php include 'include/addSong.php';
+  include 'include/style.php';
+  include 'include/playlistModal.php';
+  include 'include/addPlaylist.php';
+  ?>
+            <div class="container">
+                <a href="/main" class="btn btn-primary ">
+                  <i class="fas fa-home"></i> Home
+                </a>
+                <br>
+            <div class="col">
+              <!-- Search Form -->
+              <form action="/search" method="get">
+                <div class="input-group">
+                  <input type="search" name="search" class="form-control" placeholder="Search song">
+                  <input type="hidden" name="context" value="<?= $context ?>">
+                  <?php if ($context === 'playlist'): ?>
+                    <input type="hidden" id="playlistIDInput" name="playlistID" value="">
+                  <?php endif ?>
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                  </div>
                 </div>
-                <div class="modal-body">
-                    <br>
-
-                    <form action="/addsong" method="post" enctype="multipart/form-data">
-                        <input type="file" name="song">
-                        <button type="submit">Submit</button>
-                    </form>
-
-
-                </div>
-                <div class="modal-footer">
-                    <a href="#" data-bs-dismiss="modal">Close</a>
-                </div>
+              </form>
             </div>
+          </div>
+        </div>
+
+
+        <!-- Music Player Header -->
+        <h1 class="mt-4">Music Player</h1>
+       
+
+        <!-- Action Buttons -->
+        <div class="mb-3">
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">My
+            Playlist</button> 
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#manageSongsModal">Manage
+            Songs</button> 
         </div>
     </div>
-
-
-    <!-- //add to playlist modal -->
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggle">My playlist</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-content">
-
-                    <div class="modal-body">
-
-                        <?php foreach ($playlist as $item): ?>
-                            <br>
-                            <a href="/playlist/<?= $item['id'] ?>">
-                                <?= $item['name'] ?>
-                            </a>
-
-                            <br>
-                        <?php endforeach ?>
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <a href="#" data-bs-dismiss="modal">Close</a>
-                        <a href="#" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Create New</a>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <!-- Audio Player -->
+    <div class="audio-controls mb-3">
+      <audio id="audio" controls autoplay></audio>
     </div>
 
-    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel2">add to playlist</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="/createPlaylist" method="post">
-                        <input type="text" name="pname">
-                        <button type="submit">Submit</button>
-                    </form>
-
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-                        data-bs-dismiss="modal">Back to first</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //add to playlist modal end -->
-
-
-
-    <!-- //main view :> -->
-    <form action="/" method="get">
-        <input type="search" name="search" placeholder="search song">
-        <button type="submit" class="btn btn-primary">search</button>
-    </form>
-    <h1>Music Player</h1>
-    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open Playlist</a>
-    <a class="btn btn-primary" data-bs-toggle="modal" href="#addsongs" role="button">Add Songs</a>
-    <audio id="audio" controls autoplay></audio>
-    <ul id="playlist">
-
-        <?php foreach ($song as $song): ?>
-            <li data-src="uploads/<?= $song['file_path'] ?>">
-                <?= $song['title'] ?>
-            </li>
+    <!-- Music Playlist -->
+      <ul class="list-group" id="playlist">
+        <?php foreach ($music as $musicItem): ?>
+          <li class="list-group-item d-flex justify-content-between align-items-center"
+            data-src="<?= base_url('/uploads/songs/' . $musicItem['file_path']) ?>">
+            <?= $musicItem['title'] ?>
+            <?php if ($context === 'playlist'): ?>
+              <div class="btn-group">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"
+                  onclick="setMusicID('<?= $musicItem['music_id'] ?>')">
+                  <i class="fas fa-plus"></i>+
+                </button>
+                <a href="<?= site_url('/removeFromPlaylist/' . $musicItem['id']) ?>" class="btn btn-danger btn-sm">
+                  <i class="fas fa-minus"></i>-
+                </a>
+              </div>
+            <?php else: ?>
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"
+                onclick="setMusicID('<?= $musicItem['music_id'] ?>')">
+                <i class="fas fa-plus"></i>+
+              </button>
+            <?php endif ?>
+          </li>
         <?php endforeach ?>
+      </ul>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the playlist ID from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const playlistID = urlParams.get('playlistID');
 
-    </ul>
+      // Set the value of the hidden input field
+      const playlistIDInput = document.getElementById('playlistIDInput');
+      if (playlistID) {
+        playlistIDInput.value = playlistID;
+      }
+    });
+  </script>
 
-
-
-
-    <!-- //add to playlist -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Select from playlist</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <form action="/" method="post">
-                        <!-- <p id="modalData"></p> -->
-                        <input type="hidden" id="musicID" name="musicID">
-                        <select name="playlist" class="form-control">
-
-                            <option value="playlist">playlist</option>
-
-                        </select>
-                        <input type="submit" name="add">
-                    </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <script>
-        $(document).ready(function () {
-            // Get references to the button and modal
-            const modal = $("#myModal");
-            const modalData = $("#modalData");
-            const musicID = $("#musicID");
-            // Function to open the modal with the specified data
-            function openModalWithData(dataId) {
-                // Set the data inside the modal content
-                modalData.text("Data ID: " + dataId);
-                musicID.val(dataId);
-                // Display the modal
-                modal.css("display", "block");
-            }
-
-            // Add click event listeners to all open modal buttons
-
-            // When the user clicks the close button or outside the modal, close it
-            modal.click(function (event) {
-                if (event.target === modal[0] || $(event.target).hasClass("close")) {
-                    modal.css("display", "none");
-                }
-            });
-        });
-    </script>
-    <script>
-        const audio = document.getElementById('audio');
-        const playlist = document.getElementById('playlist');
-        const playlistItems = playlist.querySelectorAll('li');
-
-        let currentTrack = 0;
-
-        function playTrack(trackIndex) {
-            if (trackIndex >= 0 && trackIndex < playlistItems.length) {
-                const track = playlistItems[trackIndex];
-                const trackSrc = track.getAttribute('data-src');
-                audio.src = trackSrc;
-                audio.play();
-                currentTrack = trackIndex;
-            }
+  <script>
+    $(document).ready(function () {
+      // Get references to the button and modal
+      const modal = $("#myModal");
+      const modalData = $("#modalData");
+      const musicID = $("#musicID");
+      // Function to open the modal with the specified data
+      function openModalWithData(dataId) {
+        // Set the data inside the modal content
+        modalData.text("Data ID: " + dataId);
+        musicID.val(dataId);
+        // Display the modal
+        modal.css("display", "block");
+      }
+      // When the user clicks the close button or outside the modal, close it
+      modal.click(function (event) {
+        if (event.target === modal[0] || $(event.target).hasClass("close")) {
+          modal.css("display", "none");
         }
+      });
+    });
+  </script>
+  <script>
+    const audio = document.getElementById('audio');
+    const playlist = document.getElementById('playlist');
+    const playlistItems = playlist.querySelectorAll('li');
 
-        function nextTrack() {
-            currentTrack = (currentTrack + 1) % playlistItems.length;
-            playTrack(currentTrack);
-        }
+    let currentTrack = 0;
 
-        function previousTrack() {
-            currentTrack = (currentTrack - 1 + playlistItems.length) % playlistItems.length;
-            playTrack(currentTrack);
-        }
+    function playTrack(trackIndex) {
+      if (trackIndex >= 0 && trackIndex < playlistItems.length) {
+        const track = playlistItems[trackIndex];
+        const trackSrc = track.getAttribute('data-src');
+        audio.src = trackSrc;
+        audio.play();
+        currentTrack = trackIndex;
+      }
+    }
 
-        playlistItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                playTrack(index);
-            });
-        });
+    function nextTrack() {
+      currentTrack = (currentTrack + 1) % playlistItems.length;
+      playTrack(currentTrack);
+    }
 
-        audio.addEventListener('ended', () => {
-            nextTrack();
-        });
+    function previousTrack() {
+      currentTrack = (currentTrack - 1 + playlistItems.length) % playlistItems.length;
+      playTrack(currentTrack);
+    }
 
-        playTrack(currentTrack);
-    </script>
+    playlistItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        playTrack(index);
+      });
+    });
+
+    audio.addEventListener('ended', () => {
+      nextTrack();
+    });
+
+    playTrack(currentTrack);
+  </script>
+  <script>
+    function setMusicID(musicID) {
+      // Set the value of the hidden input field
+      document.getElementById('musicID').value = musicID;
+    }
+  </script>
+
 </body>
 
 </html>
